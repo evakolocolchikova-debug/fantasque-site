@@ -25,81 +25,15 @@
     font-weight: 700;
     font-style: italic;
 }
-   
-
-    
-
 
 body {
     margin: 0;
+    min-height: 9169px;
     background-color: #131313;
     font-family: 'Fantasque Sans Mono', monospace;
 }
-.hero {
-    width: 100%;
-    padding-top: 40px;
-}
 
-.code-window {
-    width: 80%;
-    max-width: 1920px;
-    margin: 0 auto;
-    border: 4px solid #ffffff;
-    background-color: #131313;
-}
-
-.window-bar {
-    height: 50px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 25px;
-    padding-right: 25px;
-}
-
-.window-square {
-    width: 20px;
-    height: 20px;
-    border: 3px solid #131313;
-}
-
-.window-close {
-    color: #131313;
-    font-family: Arial, sans-serif;
-    font-size: 32px;
-}
-
-.code-text {
-    padding: 70px 100px;
-    color: #ffffff;
-    font-family: 'Fantasque Sans Mono', monospace;
-    font-size: 48px;
-    font-weight: bold;
-    line-height: 1.2;
-}
-
-.font-name {
-    color: #b1ff00;
-}
-.hero {
-    position: relative;
-}
-
-.hero-decor {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    max-width: 1920px;
-    height: auto;
-    transform: translateX(-50%);
-    pointer-events: none;
-}
-
-
-
-    
+/* О шрифте */
 .about {
     position: absolute;
     left: 0;
@@ -130,44 +64,43 @@ body {
     color: #FFFFFF;
 }
 
-
-
-/* Four font-style cards: centered as a single group */
-
-
+/* Начертания шрифта */
 .font-styles {
     position: absolute;
     top: 1503px;
     left: 389px;
     width: 1256px;
     margin: 0;
-    transform: none;
-
     display: grid;
     grid-template-columns: repeat(2, 498px);
     column-gap: 260px;
     row-gap: 100px;
 }
 
-
-
 .style-card {
+    position: relative;
     width: 498px;
     height: 211px;
-    background-color: #C38BFF;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     color: #FFFFFF;
     font-family: 'Fantasque Sans Mono', monospace;
     font-size: 64px;
-    
+    background-color: #C38BFF;
+    background-image: linear-gradient(
+        to right,
+        #C38BFF 0%,
+        #C38BFF calc(100% - 72px),
+        #E7D0FF calc(100% - 72px),
+        #E7D0FF 100%
+    );
 }
+
 .bold-card {
     font-weight: 700;
 }
+
 .italic-card {
     font-style: italic;
 }
@@ -179,51 +112,29 @@ body {
     padding-right: 72px;
     box-sizing: border-box;
 }
-/* Белые элементы слева от карточек */
-.style-card {
-    position: relative;
-}
 
 .style-card::before {
     content: "";
     position: absolute;
-
     width: 112px;
     height: 137px;
-
     right: 100%;
     top: 50%;
     transform: translateY(-50%);
-
     background-color: #FFFFFF;
-    background-image: url("images/card-decor.svg");
+    background-image: url('images/card-decor.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 112px 137px;
 }
-/* Светло-фиолетовая полоса справа */
-.style-card {
-    background-image: linear-gradient(
-        to right,
-        #C38BFF 0%,
-        #C38BFF calc(100% - 72px),
-        #E7D0FF calc(100% - 72px),
-        #E7D0FF 100%
-    );
-}
 
-
-/* Белый и зелёный прямоугольники */
 .style-card::after {
     content: "";
     position: absolute;
-
     width: 60px;
     height: 20px;
-
     right: 44px;
     bottom: 36px;
-
     background: linear-gradient(
         to right,
         #FFFFFF 0,
@@ -232,68 +143,24 @@ body {
         #B1FF00 60px
     );
 }
-/* Position section exactly 198px below the second row of cards.
-   Cards start at 1503px; each is 211px tall, with 100px row gap. */
 
-.features {
-    position: absolute;
-    top: 2223px;
-    left: 76px;
-    width: calc(100% - 76px);
-    margin: 0;
-    padding: 0;
-}
-
-.features h2 {
-    margin: 0;
-    color: #B1FF00;
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 1.05;
-    white-space: nowrap;
-}
-
-.features p {
-    margin: 56px 0 0;
-    color: #FFFFFF;
-    font-size: 48px;
-    font-weight: 400;
-    line-height: 1.2;
-}
-
-
-
-.features-letter {
-    position: absolute;
-    width: 263px;
-    height: 435px;
-    right: 240px;
-    top: 0;
-    z-index: 1;
-}
-
-
-body {
-    min-height: 2850px;
-}
-
-.features-letter-d {
-    position: absolute;
-    width: 316px;
-    height: 366px;
-    right: 630px;
-    top: 449px;
-    z-index: 1;
-}
-
-.background-decor {
+/* SVG-графика */
+.hero-graphic {
     position: absolute;
     left: 0;
-    top: 2721px;
+    top: 0;
     width: 1920px;
-    height: 516px;
-    pointer-events: none;
-    z-index: 0;
+    height: 1221px;
+    display: block;
+}
+
+.features-graphic {
+    position: absolute;
+    left: 0;
+    top: 2200px;
+    width: 1920px;
+    height: 1037px;
+    display: block;
 }
 
 .alphabet-graphic {
@@ -331,31 +198,12 @@ body {
     height: 1475px;
     display: block;
 }
+
 .footer-graphic {
     position: absolute;
     left: 0;
     top: 8748px;
     width: 1920px;
     height: 421px;
-    display: block;
-}
-body {
-    min-height: 8946px;
-}
-.hero-graphic {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1920px;
-    height: 1221px;
-    display: block;
-}
-
-.features-graphic {
-    position: absolute;
-    left: 0;
-    top: 2200px;
-    width: 1920px;
-    height: 1037px;
     display: block;
 }
